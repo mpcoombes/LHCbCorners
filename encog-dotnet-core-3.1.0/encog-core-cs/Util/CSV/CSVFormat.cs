@@ -246,10 +246,27 @@ namespace Encog.Util.CSV
             {
                 return double.NaN;
             }
-//            if (GetTeamNumber(str) > -10)
-//            {
-//                return GetTeamNumber(str);
-//            }
+            if (str.Contains("/"))
+            {
+                string[] temp = str.Split('/');
+                if (temp[0].Length < 2)
+                {
+                    temp[0] = "0" + temp[0];
+                }
+                if (temp[1].Length < 2)
+                {
+                    temp[1] = "0" + temp[1];
+                }
+                if (temp[2].Length < 4)
+                {
+                    temp[2] = "20" + temp[2];
+                }
+                str = temp[0] + "/" + temp[1] + "/" + temp[2];
+                var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                DateTime dt = DateTime.ParseExact(str, "dd/MM/yyyy", null);
+
+                str = Convert.ToInt64((dt.ToUniversalTime() - epoch).TotalSeconds).ToString();
+            }
             return double.Parse(str.Trim(), _numberFormat);
         }
 

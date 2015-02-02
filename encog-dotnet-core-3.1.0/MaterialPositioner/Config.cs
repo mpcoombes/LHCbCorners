@@ -7,87 +7,24 @@ namespace MaterialPositioner
 {
     public static class Config
     {
-        public static List<string> Teams 
-        {
-            get
-            {
-                var teams = new List<string>();
-                teams.Add("Arsenal");
-                teams.Add("Leicester");
-                teams.Add("Man United");
-                teams.Add("QPR");
-                teams.Add("Stoke");
-                teams.Add("West Brom");
-                teams.Add("West Ham");
-                teams.Add("Crystal Palace");
-                teams.Add("Everton");
-                teams.Add("Swansea");
-                teams.Add("Hull");
-                teams.Add("Aston Villa");
-                teams.Add("Sunderland");
-                teams.Add("Man City");
-                teams.Add("Tottenham");
-                teams.Add("Southampton");
-                teams.Add("Liverpool");
-                teams.Add("Newcastle");
-                teams.Add("Burnley");
-                teams.Add("Chelsea");
-                teams.Add("Norwich");
-                teams.Add("Cardiff");
-                teams.Add("Fulham");
+     
 
-                teams.Sort();
-                return teams;
-            }
-        }
+        public static int NumberOfInputs = 3;
 
-        public static Dictionary<string, double> TeamMap
-        {
-            get
-            {
-                double i = 0.0;
-                var teamMap = new Dictionary<string, double>();
-                foreach (var ateam in Teams)
-                {
-                    teamMap[ateam] = i;
-                    i = i + 1.0;
-                }
-                return teamMap;
-            }
-        }
-
-
-        public static string GetTeam(double id)
-        {
-            foreach (var team in TeamMap)
-            {
-                if (Math.Abs(team.Value - id) < 0.01)
-                {
-                    return team.Key;
-                }
-            }
-            return "";
-        }
-
-        public static double GetTeamNumber(string id)
-        {
-            foreach (var team in TeamMap)
-            {
-                if (team.Key == id)
-                {
-                    return team.Value;
-                }
-            }
-            return -99;
-        }
-        
-
-        public static FileInfo BasePath = new FileInfo(@"C:\MlData\Test\Football\Football\L1\");
+        public static FileInfo BasePath = new FileInfo(@"F:\GIT\ENCOG\Football\LHCbCorners\encog-dotnet-core-3.1.0\Data\Football\Football\Prem\PremTest\1HL_2NNeurons\");
 
         #region "Step 1"
 
-        public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "L1.csv");
-//        public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "YieldStrengthELModulusBase.csv");
+        
+        /*
+        public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "E01.csv");
+        public static FileInfo RealRunnerFile = FileUtil.CombinePath(BasePath, "RealRunnerFile_070215.csv");
+        */
+
+        
+        public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "E01_ExcludeLastWeek.csv");
+        public static FileInfo RealRunnerFile = FileUtil.CombinePath(BasePath, "RealRunnerFile_100115.csv");
+        
 
         public static FileInfo ShuffledBaseFile = FileUtil.CombinePath(BasePath, "ShuffledMaterials.csv");
 
@@ -127,7 +64,6 @@ namespace MaterialPositioner
 
         #region "Step 7"
 
-        public static FileInfo RealRunnerFile = FileUtil.CombinePath(BasePath, "RealRunnerFile.csv");
         public static FileInfo NormalizedRealRunnerFile = FileUtil.CombinePath(BasePath, "NormalizedRealRunnerFile.csv");
 
         #endregion
@@ -139,6 +75,13 @@ namespace MaterialPositioner
         public static FileInfo RealEvaluationFile = FileUtil.CombinePath(BasePath, "RealEvaluationFile.csv");
         public static FileInfo DummyEvaluationFile = FileUtil.CombinePath(BasePath, "DummyEvaluationFile.csv");
         public static int NumberOfTeams { get; set; }
+        public static int NumberOfOutputs { get; set; }
+        public static int IdealOutputs { get; set; }
+
         #endregion
+
+        public static FileInfo OutputTests = FileUtil.CombinePath(BasePath, "OutputTests.csv");
+        
+        
     }
 }

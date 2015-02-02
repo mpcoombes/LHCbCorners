@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "encog-core-cs", "encog-core-cs\encog-core-cs.csproj", "{AC6FADF9-0904-4EBD-B22C-1C787C7E7A95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExamples", "ConsoleExamples\ConsoleExamples.csproj", "{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}"
@@ -16,10 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialCrystalBall", "MaterialPositioner\MaterialCrystalBall.csproj", "{31CF789F-737A-4107-AD2D-A93444E848F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelFileCreator", "ExcelFileCreator\ExcelFileCreator.csproj", "{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = encog-core-cs.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -39,6 +40,7 @@ Global
 		{AC6FADF9-0904-4EBD-B22C-1C787C7E7A95}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{AC6FADF9-0904-4EBD-B22C-1C787C7E7A95}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AC6FADF9-0904-4EBD-B22C-1C787C7E7A95}.Release|x86.ActiveCfg = Release|Any CPU
+		{AC6FADF9-0904-4EBD-B22C-1C787C7E7A95}.Release|x86.Build.0 = Release|Any CPU
 		{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -49,6 +51,7 @@ Global
 		{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}.Release|x86.ActiveCfg = Release|Any CPU
+		{A65A5878-6336-4ACF-9C40-540F8FAF2CC7}.Release|x86.Build.0 = Release|Any CPU
 		{7E02C68C-3412-4C39-BF1E-ECA40CEBA6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E02C68C-3412-4C39-BF1E-ECA40CEBA6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E02C68C-3412-4C39-BF1E-ECA40CEBA6B8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -59,6 +62,7 @@ Global
 		{7E02C68C-3412-4C39-BF1E-ECA40CEBA6B8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7E02C68C-3412-4C39-BF1E-ECA40CEBA6B8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{7E02C68C-3412-4C39-BF1E-ECA40CEBA6B8}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E02C68C-3412-4C39-BF1E-ECA40CEBA6B8}.Release|x86.Build.0 = Release|Any CPU
 		{31CF789F-737A-4107-AD2D-A93444E848F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{31CF789F-737A-4107-AD2D-A93444E848F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31CF789F-737A-4107-AD2D-A93444E848F0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -69,8 +73,22 @@ Global
 		{31CF789F-737A-4107-AD2D-A93444E848F0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{31CF789F-737A-4107-AD2D-A93444E848F0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{31CF789F-737A-4107-AD2D-A93444E848F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{31CF789F-737A-4107-AD2D-A93444E848F0}.Release|x86.Build.0 = Release|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7D0BE4AD-94C0-408D-B165-0F6037DD18F1}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = encog-core-cs.vsmdi
 	EndGlobalSection
 EndGlobal

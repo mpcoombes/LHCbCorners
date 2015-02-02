@@ -56,7 +56,7 @@ namespace Encog.App.Analyst.CSV.Normalize
         /// Used to process time series.
         /// </summary>
         ///
-        private TimeSeriesUtil _series;
+        public TimeSeriesUtil _series;
 
         /// <summary>
         /// Extract fields from a file into a numeric array for machine learning.
